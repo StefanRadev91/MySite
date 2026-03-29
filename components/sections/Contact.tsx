@@ -8,14 +8,31 @@ export default function Contact() {
   const t = useTranslations("contact");
   const [sending, setSending] = useState(false);
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+  const [errors, setErrors] = useState<{ name?: string; phone?: string }>({});
   const { ref, isVisible } = useScrollReveal();
+
+  const validate = (form: HTMLFormElement) => {
+    const newErrors: { name?: string; phone?: string } = {};
+    const name = (form.elements.namedItem("name") as HTMLInputElement).value.trim();
+    const phone = (form.elements.namedItem("phone") as HTMLInputElement).value.trim();
+    if (!name) newErrors.name = "Моля, въведи своето име.";
+    if (!phone) newErrors.phone = "Моля, въведи телефонен номер.";
+    return newErrors;
+  };
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const form = e.currentTarget;
+
+    const validationErrors = validate(form);
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return;
+    }
+    setErrors({});
     setSending(true);
     setStatus("idle");
 
-    const form = e.currentTarget;
     const data = {
       name: (form.elements.namedItem("name") as HTMLInputElement).value,
       email: (form.elements.namedItem("email") as HTMLInputElement).value,
@@ -43,6 +60,9 @@ export default function Contact() {
   const inputClasses =
     "w-full bg-white border border-gray-200 rounded-xl px-4 py-3.5 text-sm text-[#1a2744] placeholder:text-gray-400 focus:outline-none focus:border-primary/60 transition-colors";
 
+  const inputError =
+    "w-full bg-white border border-red-400 rounded-xl px-4 py-3.5 text-sm text-[#1a2744] placeholder:text-gray-400 focus:outline-none focus:border-red-400 transition-colors";
+
   return (
     <section id="contact" className="py-24 px-4 bg-primary">
       <div ref={ref} className="max-w-xl mx-auto">
@@ -59,24 +79,48 @@ export default function Contact() {
 
         <form
           onSubmit={handleSubmit}
+          noValidate
           className={`bg-white rounded-2xl p-6 sm:p-8 space-y-5 shadow-lg reveal reveal-delay-3 ${isVisible ? 'visible' : ''}`}
         >
           <div>
-            <label htmlFor="name" className="block text-sm font-semibold text-[#1a2744] mb-2">{t("name")}</label>
-            <input type="text" id="name" name="name" required className={inputClasses} />
+            <label htmlFor="name" className="block text-sm font-semibold text-[#1a2744] mb-2">
+              {t("name")} <span className="text-red-500">*</span>
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              className={errors.name ? inputError : inputClasses}
+              onChange={() => errors.name && setErrors(e => ({ ...e, name: undefined }))}
+            />
+            {errors.name && <p className="mt-1.5 text-xs text-red-500">{errors.name}</p>}
           </div>
+
           <div>
-            <label htmlFor="phone" className="block text-sm font-semibold text-[#1a2744] mb-2">{t("phone")}</label>
-            <input type="tel" id="phone" name="phone" placeholder={t("phonePlaceholder")} className={inputClasses} />
+            <label htmlFor="phone" className="block text-sm font-semibold text-[#1a2744] mb-2">
+              {t("phone")} <span className="text-red-500">*</span>
+            </label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder={t("phonePlaceholder")}
+              className={errors.phone ? inputError : inputClasses}
+              onChange={() => errors.phone && setErrors(e => ({ ...e, phone: undefined }))}
+            />
+            {errors.phone && <p className="mt-1.5 text-xs text-red-500">{errors.phone}</p>}
           </div>
+
           <div>
             <label htmlFor="email" className="block text-sm font-semibold text-[#1a2744] mb-2">{t("email")}</label>
-            <input type="email" id="email" name="email" required placeholder={t("emailPlaceholder")} className={inputClasses} />
+            <input type="email" id="email" name="email" placeholder={t("emailPlaceholder")} className={inputClasses} />
           </div>
+
           <div>
             <label htmlFor="business" className="block text-sm font-semibold text-[#1a2744] mb-2">{t("business")}</label>
             <input type="text" id="business" name="business" placeholder={t("businessPlaceholder")} className={inputClasses} />
           </div>
+
           <div>
             <label htmlFor="hasSite" className="block text-sm font-semibold text-[#1a2744] mb-2">{t("hasSite")}</label>
             <select id="hasSite" name="hasSite" className={inputClasses}>
@@ -86,6 +130,7 @@ export default function Contact() {
               <option value="outdated">{t("hasSiteOptions.outdated")}</option>
             </select>
           </div>
+
           <div>
             <label htmlFor="message" className="block text-sm font-semibold text-[#1a2744] mb-2">{t("message")}</label>
             <textarea id="message" name="message" rows={4} placeholder={t("messagePlaceholder")} className={inputClasses + " resize-none"} />

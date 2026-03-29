@@ -8,17 +8,9 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     const { name, email, phone, business, hasSite, message } = body;
 
-    if (!name || !email || !message) {
+    if (!name || !phone) {
       return NextResponse.json(
-        { error: "Name, email, and message are required." },
-        { status: 400 }
-      );
-    }
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      return NextResponse.json(
-        { error: "Invalid email address." },
+        { error: "Name and phone are required." },
         { status: 400 }
       );
     }
