@@ -11,8 +11,19 @@ const inter = Inter({ subsets: ["latin", "cyrillic"], display: "swap" });
 
 export const metadata: Metadata = {
   title: "Stefan Radev — Web Developer",
-  description:
-    "Професионален уеб разработчик. Модерни уебсайтове за вашия бизнес.",
+  description: "Професионален уеб разработчик. Модерни уебсайтове за вашия бизнес.",
+  openGraph: {
+    title: "Stefan Radev — Web Developer",
+    description: "Професионален уеб разработчик. Модерни уебсайтове за вашия бизнес.",
+    url: "https://mysite-ten-mocha.vercel.app",
+    siteName: "Stefan Radev",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Stefan Radev — Web Developer",
+    description: "Професионален уеб разработчик. Модерни уебсайтове за вашия бизнес.",
+  },
 };
 
 export default async function LocaleLayout({

@@ -32,12 +32,14 @@ export default function Different() {
         <div className={`grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 reveal reveal-delay-2 ${isVisible ? 'visible' : ''}`}>
           <video
             src="/videos/subs-2.mp4"
+            poster="/videos/poster-1.jpg"
             controls
             playsInline
             className="w-full rounded-2xl aspect-video object-cover"
           />
           <video
             src="/videos/subs-12.mp4"
+            poster="/videos/poster-2.jpg"
             controls
             playsInline
             className="w-full rounded-2xl aspect-video object-cover"
