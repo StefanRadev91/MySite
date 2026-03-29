@@ -1,0 +1,188 @@
+{
+  "nav": {
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "about": "About",
+    "contact": "Contact",
+    "cta": "Free consultation",
+    "langToggle": "BG"
+  },
+  "hero": {
+    "title": "A website that's truly yours.",
+    "subtitle": "Edit it yourself. No developer. No monthly fees.",
+    "description": "I build professional websites with a built-in admin panel — so you don't depend on anyone after launch.",
+    "cta": "Book a free consultation",
+    "note": "Every site is built personally by me. That's why I work with a limited number of businesses at a time."
+  },
+  "painPoints": {
+    "title": "Sound familiar?",
+    "items": [
+      {
+        "description": "You pay a developer every time you want to change a photo or add a new product."
+      },
+      {
+        "description": "Your site looks great but it's like a locked box — you can't change anything yourself."
+      },
+      {
+        "description": "You pay monthly \"maintenance\" fees for things that take 2 minutes."
+      },
+      {
+        "description": "You need something changed urgently, but you have to wait days until your developer \"finds time.\""
+      }
+    ]
+  },
+  "different": {
+    "title": "What makes me different?",
+    "subtitle": "Every site I build comes with an intuitive admin panel — as simple as editing a Word document.",
+    "points": [
+      "Want to change a photo? Log in, upload, done.",
+      "New product? Fill in the fields and hit \"Save.\"",
+      "Change business hours? 30 seconds."
+    ],
+    "summary": "No code. No calls to a developer. No extra costs."
+  },
+  "process": {
+    "title": "How does the process work?",
+    "steps": [
+      {
+        "label": "STEP 01",
+        "name": "We Talk",
+        "description": "Tell me what you need — what business you have, what you expect from the site, what problem you want to solve. No technical jargon."
+      },
+      {
+        "label": "STEP 02",
+        "name": "I Build",
+        "description": "I create the site with professional design and a built-in admin panel, tailored to your exact needs. You see every step and give feedback."
+      },
+      {
+        "label": "STEP 03",
+        "name": "Deliver & Train",
+        "description": "You get a finished site + a short training on how to manage it yourself. From that moment on — the site is in your hands."
+      }
+    ]
+  },
+  "services": {
+    "title": "Have a business? You need a site.",
+    "subtitle": "It doesn't matter what your business is — what matters is that the site works for you, not the other way around.",
+    "items": [
+      {
+        "title": "You sell products or services",
+        "description": "Online store, catalog, or service site — with the ability to update everything yourself."
+      },
+      {
+        "title": "You want clients to find you online",
+        "description": "A professional presence that inspires trust and turns visitors into customers."
+      },
+      {
+        "title": "You want freedom from dependencies",
+        "description": "No monthly maintenance fees. No waiting. Full control from day 1."
+      }
+    ]
+  },
+  "portfolio": {
+    "title": "Real projects.",
+    "subtitle": "Projects I've worked on — from online stores to educational platforms.",
+    "projects": [
+      {
+        "title": "Dar ot Zemyata",
+        "description": "An online store for natural products from Bulgarian farms. Fresh fruits, vegetables, and farm products delivered directly from the producer to your door.",
+        "tags": ["Online Store", "Farm Products"],
+        "link": "https://darotzemqta.bg",
+        "image": "https://www.darotzemqta.bg/assets/logo-DWHC4D1D.png"
+      },
+      {
+        "title": "TS Playwright Blog",
+        "description": "An educational platform for test automation with Playwright and TypeScript. 6 in-depth guides, 100+ code examples — completely free and open source.",
+        "tags": ["Educational Blog", "QA Automation"],
+        "link": "https://tsplaywright.blog",
+        "image": "https://www.tsplaywright.blog/og-image.png"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "What people I work with say",
+    "items": [
+      {
+        "quote": "The best part is I no longer call anyone when I want something changed. I log in, do it, and it's done.",
+        "name": "Maria K.",
+        "role": "cosmetics studio"
+      },
+      {
+        "quote": "Stefan explained everything in 15 minutes. Since then, I manage everything on my own.",
+        "name": "Georgi P.",
+        "role": "fitness studio"
+      },
+      {
+        "quote": "I used to pay 80 lev a month for maintenance. Now — zero.",
+        "name": "Ivana D.",
+        "role": "online store"
+      }
+    ]
+  },
+  "about": {
+    "label": "WHO'S BEHIND THIS",
+    "title": "I'm not another agency with some unknown person behind it.",
+    "titleHighlight": "I'm Stefan Radev.",
+    "bio": "For years I've been working in web development and digital marketing — helping both personal and client projects grow online. But besides websites, I love creating things that solve real problems. Here are a few:",
+    "quote": "\"Everything I create has one goal — to give control to the people who use it. That's exactly why the websites I build come with such a streamlined admin panel.\""
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "items": [
+      {
+        "question": "How much does it cost?",
+        "answer": "Every project is unique — that's why I offer a free consultation where we discuss what you need and I give you a concrete offer. No surprises."
+      },
+      {
+        "question": "How long does it take?",
+        "answer": "Depends on complexity, but most sites are ready in 2-4 weeks. You see progress throughout and give feedback."
+      },
+      {
+        "question": "Do I need to understand tech?",
+        "answer": "No. If you can write an email and upload photos — you can manage your site. Everything is made as simple as possible."
+      },
+      {
+        "question": "What if I have a problem after launch?",
+        "answer": "I'm always available. If something doesn't work or you have a question — write to me and I'll help. I don't leave you alone after delivery."
+      },
+      {
+        "question": "Are there monthly fees?",
+        "answer": "No. You pay once for the build. The only ongoing costs are hosting and domain, which are minimal."
+      },
+      {
+        "question": "Can I see examples?",
+        "answer": "Of course! Check the projects section above or write to me — I'll show you additional examples."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Ready for a site you actually control?",
+    "subtitle": "Fill out the form below and I'll get back to you within 24 hours for a short, free consultation. No pressure, no strings — we'll just discuss what you need.",
+    "note": "Every site is built personally by me. That's why I work with a limited number of businesses at a time.",
+    "name": "Your name",
+    "phone": "Phone",
+    "phonePlaceholder": "+359 ...",
+    "email": "Email",
+    "emailPlaceholder": "example@email.com",
+    "business": "What do you do?",
+    "businessPlaceholder": "Short description of your business",
+    "hasSite": "Do you already have a website?",
+    "hasSiteDefault": "Choose...",
+    "hasSiteOptions": {
+      "yes": "Yes",
+      "no": "No",
+      "outdated": "Yes, but it's outdated"
+    },
+    "message": "Anything else?",
+    "messagePlaceholder": "If you want to share something beforehand",
+    "submit": "Book a free consultation",
+    "sending": "Sending...",
+    "success": "Message sent! I'll get back to you soon.",
+    "error": "Something went wrong. Please try again.",
+    "privacy": "Your data is protected. I don't share information with third parties."
+  },
+  "footer": {
+    "tagline": "I build websites that people can manage on their own.",
+    "rights": "All rights reserved."
+  }
+}
